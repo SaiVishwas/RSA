@@ -1,0 +1,25 @@
+how to compile:
+
+
+cd Desktop/cd/rsa
+
+
+gcc -c Client.c 
+ gcc -c find_k.c -lgmp
+ gcc -c find_phi.c -lgmp
+ gcc -c find_e.c -lgmp
+ gcc -c createkey.c -lgmp
+gcc -c enc_fun.c -lgmp
+gcc -c enc_caller.c 
+ gcc -c encrypt.c 
+ gcc -c get_int.c 
+gcc -c find_d.c -lgmp
+gcc -c decrypt.c 
+gcc -c dec_fun.c -lgmp
+gcc -c stringify.c 
+gcc -c generate_prime.c -lgmp
+gcc Client.o createkey.o find_phi.o find_e.o find_k.o find_d.o encrypt.o enc_fun.o dec_fun.o decrypt.o generate_prime.o enc_caller.o stringify.o get_int.o -lgmp 
+ ./a.out 
+
+
+
